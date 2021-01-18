@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>light</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .all {
+            background-color: darkorchid;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .img {
+            height: 200px;
+            width: 300px;
+        }
+
+        .heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 100px;
+            color: greenyellow;
+            padding-bottom: 50px;
+
+        }
+        
+        .main_body{
+            width: 50%;
+            
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: auto;
+            padding-top: 50px;
+        }
+        .btn{
+            width: 100px;
+            color: aliceblue;
+            background-color: firebrick;
+            padding: 5px 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div class="heading">
+            <h1> Turn Off and On the light </h1>
+        </div>
+          <hr>
+        
+        <div class="main_body">
+            <button id="btn1" class="btn">Turn on the light</button>
+         <img src="pic/off.png" class="img" id="im">
+        <button id="btn2" class="btn">Turn off the light</button>
+        </div> 
+        
+        
+    </div>
+    
+    <script>
+    const im = document.getElementById('im');
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+        btn1.addEventListener('click' , () => {
+            im.setAttribute('src','pic/on.png');
+        });
+        
+        btn2.addEventListener('click' , () => {
+            im.setAttribute('src' , 'pic/off.png');
+        })
+    </script>
+
+</body>
+
+</html>
